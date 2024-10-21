@@ -13,3 +13,5 @@ type CorPreferida = CorRGB | CorCMYK;
 function setCorPreferida(pessoa: Pessoa, cor: CorPreferida): Pessoa{
     return {...pessoa, corPreferida: cor}
 }
+
+export default 1;
