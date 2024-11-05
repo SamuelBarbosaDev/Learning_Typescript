@@ -43,6 +43,7 @@ Além deste repositório, aqui estão alguns recursos adicionais que podem ajuda
 - [CLI Commands](https://docs.npmjs.com/cli/v9/commands?v=true): Comandos do NPM.
 - [Node](https://nodejs.org/pt/learn/getting-started/introduction-to-nodejs): Documentação do node.
 - [Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+- [Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
 
 ## Licença
 
