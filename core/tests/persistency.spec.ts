@@ -1,4 +1,4 @@
-import { Persistency } from "../solid/2-single-responsibility-principle/services/persistency";
+import { Persistency } from "../solid/6-dependency-inversion-principle/services/persistency";
 
 describe('Persistency', () => {
     afterEach(() => jest.clearAllMocks());

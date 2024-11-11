@@ -1,6 +1,6 @@
-import { ShoppingCart } from './shopping-cart';
-import { Discount } from './discount';
-import { CartItem } from './interfaces/cart-item';
+import { ShoppingCart } from '../solid/6-dependency-inversion-principle/classes/shopping-cart';
+import { Discount } from '../solid/6-dependency-inversion-principle/classes/discount';
+import { CartItem } from '../solid/6-dependency-inversion-principle/classes/interfaces/cart-item';
 
 const createSut = () => {
     const discountMock = createDiscountMock();
@@ -44,6 +44,13 @@ describe('ShoppingCart', () => {
         expect(sut.total()).toBe(41);
         expect(sut.totalWithDiscount()).toBe(41);
     })
+    it('Deve adicionar produtos e limpar o carrinho', () => {
+        const { sut } = createSutWithProducts();
+        expect(sut.items.length).toBe(2);
+        sut.clear();
+        expect(sut.items.length).toBe(0);
+        expect(sut.isEmpty()).toBe(true);
+    });
     it('Deve remove produtos', () => {
         const { sut } = createSutWithProducts();
         expect(sut.items.length).toBe(2);
