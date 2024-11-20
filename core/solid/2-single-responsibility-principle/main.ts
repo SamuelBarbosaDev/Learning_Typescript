@@ -1,3 +1,8 @@
+/*
+O princípio da responsabilidade única ( PRI ) afirma que 
+"nunca deve haver mais de uma razão para uma classe mudar". 
+Em outras palavras, cada classe deve ter apenas uma responsabilidade.
+*/
 import { ShoppingCart } from './classes/shopping-cart';
 import { Order } from './classes/order';
 import { Messaging } from './services/messaging';
