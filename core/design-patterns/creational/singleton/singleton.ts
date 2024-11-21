@@ -1,3 +1,9 @@
+/*
+Neste exemplo, o construtor da classe Singleton é privado para evitar a 
+criação de novas instâncias fora da classe. O método estático getInstance 
+garante que apenas uma instância da classe seja criada e reutilizada.
+*/
+
 class Singleton {
     private static instance: Singleton;
 
