@@ -14,31 +14,31 @@ necessário.
 */
 
 // Passo 1: Definir a Interface do Sujeito
-interface Resource{
+interface Resource {
     request(): void;
 }
 
 // Passo 2: Implementar a Classe Real (RealSubject)
-class ExpensiveResource implements Resource{
-    constructor(){
+class ExpensiveResource implements Resource {
+    constructor() {
         this.loadResource();
     }
 
-    private loadResource(): void{
-        console.log('Loading expensive resource...')
+    private loadResource(): void {
+        console.log('Loading expensive resource...');
     }
 
     request(): void {
-        console.log('Using expensive resource...')
+        console.log('Using expensive resource...');
     }
 }
 
 // Passo 3: Criar a Classe Proxy
-class ResourceProxy implements Resource{
+class ResourceProxy implements Resource {
     private realResource: ExpensiveResource | null = null;
 
     request(): void {
-        if(this.realResource === null){
+        if (this.realResource === null) {
             this.realResource = new ExpensiveResource();
         }
         this.realResource.request();
@@ -49,3 +49,39 @@ class ResourceProxy implements Resource{
 const resource = new ResourceProxy();
 resource.request();
 resource.request();
+
+/*
+Vantagens do Padrão Proxy
+
+    Controle de Acesso: Controla o acesso a objetos, adicionando uma 
+    camada de controle, segurança ou funcionalidade adicional.
+
+    Adiar Inicialização: Adia a criação ou a inicialização de objetos 
+    custosos até que sejam realmente necessários, economizando recursos.
+
+    Redução de Custo: Reduz o custo de criar, carregar ou inicializar 
+    objetos caros, melhorando o desempenho e a eficiência do sistema.
+
+    Encapsulamento de Referências: Encapsula a complexidade das referências 
+    a objetos remotos ou pesados, simplificando a interação com esses objetos.
+
+Problemas que o Padrão Proxy Resolve
+
+    Custo de Inicialização: Resolve problemas de inicialização custosa ao 
+    adiar a criação de objetos pesados até que sejam necessários.
+
+    Controle de Acesso e Segurança: Oferece controle adicional sobre quem 
+    pode acessar ou modificar um objeto, melhorando a segurança do sistema.
+
+    Abstração de Complexidade Remota: Abstrai a complexidade da interação 
+    com objetos remotos, proporcionando uma interface mais simples e 
+    transparente para o cliente.
+
+    Otimização de Recursos: Otimiza o uso de recursos, evitando a criação e 
+    carga desnecessária de objetos pesados, contribuindo para a eficiência 
+    do sistema.
+
+O padrão Proxy é extremamente útil em situações onde você precisa controlar o 
+acesso a objetos, adiar a criação de objetos pesados ou encapsular a 
+complexidade de objetos remotos.
+*/
