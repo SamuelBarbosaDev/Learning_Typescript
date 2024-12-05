@@ -1,4 +1,8 @@
 /*
+O padrão Factory Method define uma interface para criar um objeto, mas 
+permite que as subclasses decidam qual classe instanciar. Esse padrão 
+promove a encapsulação da lógica de criação de objetos.
+
 Exemplo: Transportes
 
 Imagine que temos um sistema que lida com diferentes tipos de transportes.
