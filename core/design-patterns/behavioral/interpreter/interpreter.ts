@@ -1,9 +1,14 @@
 /*
-O padrão de projeto Interpreter é usado para definir uma gramática para a linguagem e um interpretador que usa essa gramática para interpretar sentenças na linguagem. Ele é útil para implementar linguagens específicas de domínio (DSLs) e traduzir textos de acordo com uma gramática definida.
+O padrão de projeto Interpreter é usado para definir uma gramática 
+para a linguagem e um interpretador que usa essa gramática para 
+interpretar sentenças na linguagem. Ele é útil para implementar linguagens 
+específicas de domínio (DSLs) e traduzir textos de acordo com uma gramática 
+definida.
+
 Exemplo em TypeScript: Interpreter
 
-Vamos criar um exemplo simples onde temos uma linguagem para expressar operações matemáticas básicas (adição e subtração).
-Passo 1: Definir a Interface Expression
+Vamos criar um exemplo simples onde temos uma linguagem para expressar operações 
+matemáticas básicas (adição e subtração).
 */
 
 // Passo 1: Definir a Interface Expression
